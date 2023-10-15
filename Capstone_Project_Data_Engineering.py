@@ -21,3 +21,25 @@ df_creditCard.show(5)
 #Read json file which holds customer information into dataframe
 df_customer = spark.read.load("cdw_sapp_custmer.json", format="json", header = True,inferSchema = True)
 df_customer.show(5)
+
+#Extract the JSON files based on the mapping 
+
+df_branch_new = df_branch.select("BRANCH_CODE", "BRANCH_NAME", "BRANCH_STREET", "BRANCH_CITY", "BRANCH_STATE", "BRANCH_ZIP", "BRANCH_PHONE", "LAST_UPDATED")
+# display the schema in tree format
+df_branch_new.printSchema()
+#show the five rows
+df_branch_new.show(5)
+
+
+df_creditCard_new = df_creditCard.select("CREDIT_CARD_NO","DAY", "MONTH", "YEAR", "CUST_SSN", "BRANCH_CODE", "TRANSACTION_TYPE", "TRANSACTION_VALUE", "TRANSACTION_ID")
+# display the schema in tree format
+df_creditCard_new.printSchema()
+#show the first five rows
+df_creditCard_new.show(5)
+
+df_customer_new=df_customer.select("SSN", "FIRST_NAME", "MIDDLE_NAME", "LAST_NAME", "CREDIT_CARD_NO", "STREET_NAME", "APT_NO", "CUST_CITY",
+"CUST_STATE", "CUST_COUNTRY", "CUST_ZIP", "CUST_PHONE", "CUST_EMAIL", "LAST_UPDATED")
+# display the schema in tree format
+df_customer_new.printSchema()
+#show the first five rows
+df_customer_new.show(5)
