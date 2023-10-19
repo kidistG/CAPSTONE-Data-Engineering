@@ -459,17 +459,13 @@ def customer_by_state():
     FROM cdw_sapp_customer \
     group by CUST_STATE\
     ORDER BY NUM_CUSTOMER DESC"
-
     
     try:
-        mycursor.execute(sql)
-         
+        mycursor.execute(sql)  
 
     except:
         conn.rollback()
     
-     
-
     highest = mycursor.fetchall()
       # create DataFrame using data
     df = pd.DataFrame(highest, columns =['CUST_STATE', 'NUM_CUSTOMER'])
@@ -646,7 +642,7 @@ rejected_married_M()
 # Find and plot the top three months with the largest volume of transaction data.
 # Note: Save a copy of the visualization to a folder in your github, making sure it is PROPERLY NAMED!
 
-def top_largest_transaction():
+def top3_largest_transaction():
     
     conn = mydbconnection.connect(
                     host = 'localhost',
@@ -677,7 +673,7 @@ def top_largest_transaction():
     print(df)
     mycursor.close()
     conn.close()
-top_largest_transaction()
+top3_largest_transaction()
 
 # Functional Requirements 5.4	
 # Find and plot which branch processed the highest total dollar value of healthcare transactions.
