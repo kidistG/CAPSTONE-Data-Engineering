@@ -2,7 +2,7 @@
 ## ETL process for a Loan Application dataset and a Credit Card dataset
 
 ## Description 
-This is a Capeston project for demonstrating what we learn through out Data Engineering training at Perscholas cohort with TEKSystems. This Project is to manage An ETL process for a Loan Application dataset and a Credit Card dataset using Python (Pandas, advanced modules, e.g., Matplotlib), SQL, Apache Spark (Spark Core, Spark SQL), and Python Visualization and Analytics libraries. For this project there are two datasets credit card and loan application datasets. The Credit Card System database is an independent system developed for managing activities such as registering new customers and approving or canceling requests, etc., using the architecture. 
+This is a Capeston project for demonstrating what we learn through out Data Engineering training at Perscholas cohort with TEKSystems. This Project is to manage An ETL process for a Loan Application dataset and a Credit Card dataset using Python (Pandas, advanced modules, e.g., Matplotlib), SQL, Apache Spark (Spark Core, Spark SQL), and Python Visualization and Analytics libraries. The project is useful in real world for a bank teller To display data from the database and visualize the business development based on Front end console. For this project there are two datasets credit card and loan application datasets. The Credit Card System database is an independent system developed for managing activities such as registering new customers and approving or canceling requests, etc., using the architecture. 
 
 ### Credit Card System database contains the following datasets
 
